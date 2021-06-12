@@ -17,14 +17,18 @@ call plug#begin('~/.vim/bundle')
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'airblade/vim-gitgutter'
   Plug 'jistr/vim-nerdtree-tabs'
+  Plug 'joshdick/onedark.vim'
   Plug 'junegunn/goyo.vim'
   Plug 'preservim/nerdtree'
+  Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 " Config
 let g:NERDTreeDirArrows=1
 let g:NERDTreeMinimalUI=1
 let g:gitgutter_enabled=0
+
+highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 
 " Mapping
 nnoremap <silent> <F1> :Goyo<CR>
@@ -35,3 +39,19 @@ inoremap <silent> <F2> <C-O>:NERDTreeTabsToggle<CR>
 
 nnoremap <silent> <F6> :GitGutterToggle<CR>
 inoremap <silent> <F6> <C-O>:GitGutterToggle<CR>
+
+function ONEDARK()
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+  set cursorline
+  colorscheme onedark
+:endfunction
+cnoreabbrev onedark call ONEDARK()
+
+function DEFAULT()
+  set notermguicolors
+  set nocursorline
+  colorscheme default
+:endfunction
+cnoreabbrev default call DEFAULT()
