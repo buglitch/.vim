@@ -30,12 +30,7 @@ set clipboard^=unnamedplus
 let c_space_errors=1
 let python_space_errors=1
 
-vnoremap <Right> l
-vnoremap <Left>  h
-vnoremap <Up>    k
-vnoremap <Down>  j
-
-source $VIMRUNTIME/mswin.vim
+source ~/.vim/custom/edit.vim
 source ~/.vim/custom/functions.vim
 source ~/.vim/custom/lines.vim
 source ~/.vim/custom/tabs.vim
