@@ -20,7 +20,7 @@ call plug#begin('~/.vim/bundle')
   Plug 'junegunn/goyo.vim'
   Plug 'preservim/nerdtree'
   Plug 'sheerun/vim-polyglot'
-  Plug 'jsit/disco.vim'
+  Plug 'Buglitch/disco.vim'
 call plug#end()
 
 " Config
@@ -41,3 +41,28 @@ nnoremap <silent> <F6> :GitGutterToggle<CR>
 inoremap <silent> <F6> <C-O>:GitGutterToggle<CR>
 
 set t_Co=256
+
+let g:disco_color_map = {
+	\'red': 'Orange',
+	\'green': 'Magenta',
+	\'yellow': 'Green',
+	\'blue': 'Blue',
+	\'magenta': 'Yellow',
+	\'cyan': 'Cyan',
+	\
+	\'dimred': 'Brown',
+	\'dimgreen': 'DarkMagenta',
+	\'dimyellow': 'DarkGreen',
+	\'dimblue': 'DarkBlue',
+	\'dimmagenta': 'DarkYellow',
+	\'dimcyan': 'DarkCyan',
+	\
+	\'bg': 'Black',
+	\'fg': 'White',
+	\'truered': 'DarkRed',
+	\'dim': 'Dark1',
+	\'dimtwo': 'Dark2',
+	\'brightyellow': 'Yellow',
+\}
+
+colorscheme disco
