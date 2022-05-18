@@ -17,10 +17,10 @@ call plug#begin('~/.vim/bundle')
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'airblade/vim-gitgutter'
   Plug 'jistr/vim-nerdtree-tabs'
-  Plug 'joshdick/onedark.vim'
   Plug 'junegunn/goyo.vim'
   Plug 'preservim/nerdtree'
   Plug 'sheerun/vim-polyglot'
+  Plug 'jsit/disco.vim'
 call plug#end()
 
 " Config
@@ -40,18 +40,4 @@ inoremap <silent> <F2> <C-O>:NERDTreeTabsToggle<CR>
 nnoremap <silent> <F6> :GitGutterToggle<CR>
 inoremap <silent> <F6> <C-O>:GitGutterToggle<CR>
 
-function ONEDARK()
-  if (has("termguicolors"))
-    set termguicolors
-  endif
-  set cursorline
-  colorscheme onedark
-:endfunction
-cnoreabbrev onedark call ONEDARK()
-
-function DEFAULT()
-  set notermguicolors
-  set nocursorline
-  colorscheme default
-:endfunction
-cnoreabbrev default call DEFAULT()
+set t_Co=256
