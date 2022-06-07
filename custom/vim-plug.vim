@@ -14,12 +14,14 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 " Plugings
 call plug#begin('~/.vim/bundle')
-  Plug 'Xuyuanp/nerdtree-git-plugin'
-  Plug 'airblade/vim-gitgutter'
-  Plug 'jistr/vim-nerdtree-tabs'
-  Plug 'junegunn/goyo.vim'
-  Plug 'preservim/nerdtree'
+  Plug 'tpope/vim-sensible/'
+  Plug 'tpope/vim-commentary'
   Plug 'sheerun/vim-polyglot'
+  Plug 'preservim/nerdtree'
+  Plug 'junegunn/goyo.vim'
+  Plug 'jistr/vim-nerdtree-tabs'
+  Plug 'airblade/vim-gitgutter'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'Buglitch/disco.vim'
 call plug#end()
 
