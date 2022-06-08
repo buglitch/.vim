@@ -67,4 +67,6 @@ let g:disco_color_map = {
 	\'brightyellow': 'Yellow',
 \}
 
-colorscheme disco
+if $TERM != 'linux'
+	colorscheme disco
+endif
