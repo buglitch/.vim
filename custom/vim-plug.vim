@@ -42,6 +42,7 @@ inoremap <silent> <F2> <C-O>:NERDTreeTabsToggle<CR>
 nnoremap <silent> <F6> :GitGutterToggle<CR>
 inoremap <silent> <F6> <C-O>:GitGutterToggle<CR>
 
+" Colorscheme
 set t_Co=256
 
 let g:disco_color_map = {
