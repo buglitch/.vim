@@ -45,14 +45,14 @@ inoremap <silent> <F6> <C-O>:GitGutterToggle<CR>
 set t_Co=256
 
 let g:disco_color_map = {
-	\'red': 'Orange',
+	\'red': 'DarkOrange',
 	\'green': 'Magenta',
 	\'yellow': 'Green',
 	\'blue': 'Blue',
 	\'magenta': 'Yellow',
 	\'cyan': 'Cyan',
 	\
-	\'dimred': 'Brown',
+	\'dimred': 'DarkOrange4',
 	\'dimgreen': 'DarkMagenta',
 	\'dimyellow': 'DarkGreen',
 	\'dimblue': 'DarkBlue',
@@ -62,8 +62,8 @@ let g:disco_color_map = {
 	\'bg': 'Black',
 	\'fg': 'White',
 	\'truered': 'DarkRed',
-	\'dim': 'Grey20',
-	\'dimtwo': 'Grey40',
+	\'dim': 'Grey19',
+	\'dimtwo': 'Grey54',
 	\'brightyellow': 'Yellow',
 \}
 
