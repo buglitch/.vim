@@ -64,7 +64,7 @@ let g:disco_color_map = {
 	\'fg': 'White',
 	\'truered': 'DarkRed',
 	\'dim': 'Grey19',
-	\'dimtwo': 'Grey54',
+	\'dimtwo': 'Grey53',
 	\'brightyellow': 'Yellow',
 \}
 
