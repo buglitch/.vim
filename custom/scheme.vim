@@ -26,6 +26,8 @@ let s:color_map = {
 	\'Grey100'       : 231,
 \}
 
+set background=dark
+
 if $TERM == 'linux'
 	set t_Co=8
 else

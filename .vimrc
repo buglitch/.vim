@@ -2,38 +2,39 @@ if &compatible
     set nocompatible
 endif
 
-filetype plugin indent on
-syntax on
+set encoding=utf-8 fileencodings=
 
-set encoding=utf-8
-set background=dark
-set laststatus=2
-set title
+" misc
 set mouse=a
-
-set showmatch
-
-set tabstop=4
-set shiftwidth=4
-set expandtab
-set autoindent
-set smartindent
-
 set scrolloff=4
 set sidescrolloff=8
+set title
 
+" indent
+set autoindent
+set expandtab
+set shiftwidth=4
+set smartindent
+set tabstop=4
+
+" search
+set showmatch
 set hlsearch
 
+" clipboard
 set clipboard=unnamed
 set clipboard^=unnamedplus
 
 let c_space_errors=1
 let python_space_errors=1
 
+" plugins
+source ~/.vim/custom/vim-plug.vim
+
+" custom
 source ~/.vim/custom/edit.vim
 source ~/.vim/custom/functions.vim
 source ~/.vim/custom/lines.vim
 source ~/.vim/custom/scheme.vim
 source ~/.vim/custom/tabs.vim
 source ~/.vim/custom/term.vim
-source ~/.vim/custom/vim-plug.vim
