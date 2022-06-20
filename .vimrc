@@ -33,6 +33,7 @@ let python_space_errors=1
 source ~/.vim/custom/edit.vim
 source ~/.vim/custom/functions.vim
 source ~/.vim/custom/lines.vim
+source ~/.vim/custom/scheme.vim
 source ~/.vim/custom/tabs.vim
 source ~/.vim/custom/term.vim
 source ~/.vim/custom/vim-plug.vim

@@ -10,3 +10,8 @@ inoremap <silent> <F4> <C-O>:execute "set colorcolumn="
 
 nnoremap <silent> <F5> :set list!<CR>
 inoremap <silent> <F5> <C-O>:set list!<CR>
+
+nm <silent> <F9> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name")
+    \ . '> trans<' . synIDattr(synID(line("."),col("."),0),"name")
+    \ . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name")
+    \ . ">"<CR>

@@ -22,7 +22,6 @@ call plug#begin('~/.vim/bundle')
   Plug 'jistr/vim-nerdtree-tabs'
   Plug 'airblade/vim-gitgutter'
   Plug 'Xuyuanp/nerdtree-git-plugin'
-  Plug 'Buglitch/disco.vim'
 call plug#end()
 
 " Config
@@ -41,33 +40,3 @@ inoremap <silent> <F2> <C-O>:NERDTreeTabsToggle<CR>
 
 nnoremap <silent> <F6> :GitGutterToggle<CR>
 inoremap <silent> <F6> <C-O>:GitGutterToggle<CR>
-
-" Colorscheme
-set t_Co=256
-
-let g:disco_color_map = {
-	\'red': 'DarkOrange',
-	\'green': 'Magenta',
-	\'yellow': 'Green',
-	\'blue': 'Blue',
-	\'magenta': 'Yellow',
-	\'cyan': 'Cyan',
-	\
-	\'dimred': 'DarkOrange4',
-	\'dimgreen': 'DarkMagenta',
-	\'dimyellow': 'DarkGreen',
-	\'dimblue': 'DarkBlue',
-	\'dimmagenta': 'DarkYellow',
-	\'dimcyan': 'DarkCyan',
-	\
-	\'bg': 'Black',
-	\'fg': 'White',
-	\'truered': 'DarkRed',
-	\'dim': 'Grey19',
-	\'dimtwo': 'Grey53',
-	\'brightyellow': 'Yellow',
-\}
-
-if $TERM != 'linux'
-	colorscheme disco
-endif
