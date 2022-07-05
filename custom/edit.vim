@@ -5,4 +5,5 @@ vnoremap <Down>  j
 
 source $VIMRUNTIME/mswin.vim
 
-noremap <C-V> <C-Q>
+unmap <C-V>
+unmap <C-Y>
