@@ -68,7 +68,7 @@ if exists("syntax_on")
 	syntax reset
 endif
 
-let g:colors_name = "scheme"
+let g:colors_name = "custom"
 
 " Check to see if we can do colors 8-15
 if has('gui_running') || (&t_Co > 8)
