@@ -89,18 +89,18 @@ endif
 if s:gt_eight " Needs to be different from Comment
 	call <SID>set_colors("ColorColumn"  , "" , "Grey25" , "")
 	call <SID>set_colors("CursorColumn" , "" , "Grey25" , "")
-	call <SID>set_colors("CursorLine" , "" , "Grey25" , "NONE")
+	call <SID>set_colors("CursorLine" , "" , "" , "NONE")
 else
 	call <SID>set_colors("ColorColumn"  , "NONE" , "NONE" , "")
 	call <SID>set_colors("CursorColumn" , "NONE" , "NONE" , "")
-	call <SID>set_colors("CursorLine"   , ""     , "Grey25"  , "")
+	call <SID>set_colors("CursorLine"   , ""     , ""  , "")
 endif
 
 call <SID>set_colors("Conceal"  , ""     , "NONE" , "")
 call <SID>set_colors("Cursor"   , "NONE" , "NONE" , "reverse")
 call <SID>set_colors("CursorIM" , ""     , ""     , "")
 
-call <SID>set_colors("CursorLineNr" , "NONE" , "Grey25"      , "")
+call <SID>set_colors("CursorLineNr" , "DarkGray" , ""      , "")
 call <SID>set_colors("Directory"    , "Blue" , ""         , "")
 call <SID>set_colors("DiffAdd"      , "DarkGreen", "NONE", "")
 call <SID>set_colors("DiffDelete"   , "DarkRed",   "NONE", "")

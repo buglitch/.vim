@@ -7,6 +7,7 @@ endif
 set encoding=utf-8 fileencodings=
 
 " misc
+set cursorline
 set mouse=a
 set scrolloff=4
 set sidescrolloff=8
