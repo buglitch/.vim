@@ -1,5 +1,12 @@
 set listchars=eol:¬,tab:»\ ,extends:>,precedes:<,space:·,nbsp:␣
 
+"vim-plug: <F1> :Goyo
+
+nnoremap <silent> <M-1> :set filetype=markdown<CR>
+inoremap <silent> <M-1> <C-O>:set filetype=markdown<CR>
+
+"vim-plug: <F2> :NERDTreeTabsToggle
+
 nnoremap <silent> <F3> :set invnumber<CR>
 inoremap <silent> <F3> <C-O>:set invnumber<CR>
 
@@ -16,6 +23,8 @@ inoremap <silent> <M-4> <C-O>:set cursorcolumn!<CR>
 
 nnoremap <silent> <F5> :set list!<CR>
 inoremap <silent> <F5> <C-O>:set list!<CR>
+
+"vim-plug: <F6> :GitGutterToggle
 
 nm <silent> <F9> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name")
     \ . '> trans<' . synIDattr(synID(line("."),col("."),0),"name")
