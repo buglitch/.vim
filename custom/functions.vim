@@ -24,6 +24,9 @@ inoremap <silent> <M-4> <C-O>:set cursorcolumn!<CR>
 nnoremap <silent> <F5> :set list!<CR>
 inoremap <silent> <F5> <C-O>:set list!<CR>
 
+nnoremap <silent> <M-5> :bufdo e<CR>
+inoremap <silent> <M-5> <C-O>:bufdo e<CR>
+
 "vim-plug: <F6> :GitGutterToggle
 
 nm <silent> <F9> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name")
