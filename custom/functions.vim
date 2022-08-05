@@ -7,6 +7,9 @@ inoremap <silent> <M-1> <C-O>:set filetype=markdown<CR>
 
 "vim-plug: <F2> :NERDTreeTabsToggle
 
+nnoremap <silent> <M-2> :pwd<CR>
+inoremap <silent> <M-2> <C-O>:pwd<CR>
+
 nnoremap <silent> <F3> :set invnumber<CR>
 inoremap <silent> <F3> <C-O>:set invnumber<CR>
 
