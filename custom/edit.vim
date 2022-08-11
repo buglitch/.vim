@@ -5,5 +5,12 @@ vnoremap <Down>  j
 
 source $VIMRUNTIME/mswin.vim
 
+if exists("##ModeChanged")
+  autocmd ModeChanged *:i behave mswin
+  autocmd ModeChanged i:* behave xterm
+else
+  behave xterm
+endif
+
 unmap <C-V>
 unmap <C-Y>
