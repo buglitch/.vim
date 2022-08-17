@@ -31,8 +31,6 @@ let g:NERDTreeDirArrows=1
 let g:NERDTreeMinimalUI=1
 let g:gitgutter_enabled=0
 
-highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
-
 " Mapping
 nnoremap <silent> <F1> :Goyo<CR>
 inoremap <silent> <F1> <C-O>:Goyo<CR>

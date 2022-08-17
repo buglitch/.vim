@@ -1,5 +1,3 @@
-set listchars=eol:¬,tab:»\ ,extends:>,precedes:<,space:·,nbsp:␣
-
 "vim-plug: <F1> :Goyo
 
 nnoremap <silent> <M-1> :set filetype=markdown<CR>

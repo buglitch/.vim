@@ -20,6 +20,13 @@ set shiftwidth=4
 set smartindent
 set tabstop=4
 
+" linebreak
+set showbreak=-
+set breakindent
+
+" listchars
+set listchars=eol:$,tab:>\ ,extends:+,precedes:+,space:.,nbsp:_,trail:~
+
 " search
 set showmatch
 set hlsearch
