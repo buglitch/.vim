@@ -12,6 +12,7 @@ set mouse=a
 set scrolloff=4
 set sidescrolloff=8
 set title
+set undofile
 
 " indent
 set autoindent
@@ -21,15 +22,17 @@ set smartindent
 set tabstop=4
 
 " linebreak
-set showbreak=-
 set breakindent
+set showbreak=-
 
 " listchars
 set listchars=eol:$,tab:>\ ,extends:+,precedes:+,space:.,nbsp:_,trail:~
 
 " search
-set showmatch
 set hlsearch
+set ignorecase
+set showmatch
+set smartcase
 
 " clipboard
 set clipboard=unnamed
