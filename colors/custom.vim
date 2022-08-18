@@ -78,7 +78,7 @@ else
 endif
 
 " Check to see if we can do italic
-if (&t_ZH != '' && &t_ZH != '[7m')
+if has("gui_running") || (has("unix") && system("tput sitm") == "\033[3m") || (&t_ZH != '' && &t_ZH != '[7m') "[27m'
 	let s:italic = 1
 else
 	let s:italic = 0
