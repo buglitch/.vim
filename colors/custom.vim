@@ -163,7 +163,7 @@ call <SID>set_colors("StatusLineTermNC" , "DarkMagenta" , "NONE"         , "reve
 call <SID>set_colors("TabLine"          , "White"       , "Grey25"          , "NONE")
 call <SID>set_colors("TabLineFill"      , "Grey25"      , "Grey50"       , "")
 call <SID>set_colors("TabLineSel"       , ""         , ""             , "NONE")
-call <SID>set_colors("Title"            , "Yellow"     , ""             , "")
+call <SID>set_colors("Title"            , "Magenta"     , ""             , "Bold")
 call <SID>set_colors("Visual"           , ""         , "Grey25"          , "")
 call <SID>set_colors("VisualNOS"        , "Grey25"      , ""             , "")
 call <SID>set_colors("WarningMsg"       , "DarkRed"      , "NONE"             , "")
