@@ -1,32 +1,35 @@
 "vim-plug: <F1> :Goyo
 
-nnoremap <silent> <M-1> :set filetype=markdown<CR>
-inoremap <silent> <M-1> <C-O>:set filetype=markdown<CR>
+nnoremap <silent> <M-!> :let &cole=(&cole == 2) ? 0 : 2
+         \ <bar> echo 'conceallevel ' . &cole<CR>
+
+inoremap <silent> <M-!> <C-O>:let &cole=(&cole == 2) ? 0 : 2
+         \ <bar> echo 'conceallevel ' . &cole<CR>
 
 "vim-plug: <F2> :NERDTreeTabsToggle
 
-nnoremap <silent> <M-2> :pwd<CR>
-inoremap <silent> <M-2> <C-O>:pwd<CR>
+nnoremap <silent> <M-@> :pwd<CR>
+inoremap <silent> <M-@> <C-O>:pwd<CR>
 
 nnoremap <silent> <F3> :set invnumber<CR>
 inoremap <silent> <F3> <C-O>:set invnumber<CR>
 
-nnoremap <silent> <M-3> :set cursorline!<CR>
-inoremap <silent> <M-3> <C-O>:set cursorline!<CR>
+nnoremap <silent> <M-#> :set cursorline!<CR>
+inoremap <silent> <M-#> <C-O>:set cursorline!<CR>
 
 nnoremap <silent> <F4> :execute "set colorcolumn="
          \ . (&colorcolumn == "" ? "80" : "")<CR>
 inoremap <silent> <F4> <C-O>:execute "set colorcolumn="
          \ . (&colorcolumn == "" ? "80" : "")<CR>
 
-nnoremap <silent> <M-4> :set cursorcolumn!<CR>
-inoremap <silent> <M-4> <C-O>:set cursorcolumn!<CR>
+nnoremap <silent> <M-$> :set cursorcolumn!<CR>
+inoremap <silent> <M-$> <C-O>:set cursorcolumn!<CR>
 
 nnoremap <silent> <F5> :set list!<CR>
 inoremap <silent> <F5> <C-O>:set list!<CR>
 
-nnoremap <silent> <M-5> :bufdo e<CR>
-inoremap <silent> <M-5> <C-O>:bufdo e<CR>
+nnoremap <silent> <M-%> :bufdo e<CR>
+inoremap <silent> <M-%> <C-O>:bufdo e<CR>
 
 "vim-plug: <F6> :GitGutterToggle
 

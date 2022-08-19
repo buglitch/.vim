@@ -178,15 +178,17 @@ else
 	call <SID>set_colors("Todo"       , "Green"   , "NONE" , "reverse")
 endif
 
-" End Highlight Groups }}}
-
-" Group Names (:h group-name) {{{
-
 if (s:italic)
 	call <SID>set_colors("Comment", "Grey50", "", "italic")
 else
 	call <SID>set_colors("Comment", "Grey50", "", "")
 endif
+
+call <SID>set_colors("logBrackets", "DarkCyan", "", "")
+
+" End Highlight Groups }}}
+
+" Group Names (:h group-name) {{{
 
 call <SID>set_colors("DiffText", "White", "NONE", "bold")
 hi link diffFile      DiffText
