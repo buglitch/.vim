@@ -14,13 +14,14 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 " Plugings
 call plug#begin('~/.vim/bundle')
-  Plug 'tpope/vim-rsi'
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-sensible'
+  Plug 'tpope/vim-rsi'
   Plug 'tpope/vim-commentary'
   Plug 'sheerun/vim-polyglot'
   Plug 'preservim/nerdtree'
   Plug 'mkitt/tabline.vim'
+  Plug 'michaelb/vim-tips'
   Plug 'junegunn/goyo.vim'
   Plug 'jistr/vim-nerdtree-tabs'
   Plug 'airblade/vim-gitgutter'
