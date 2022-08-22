@@ -15,9 +15,9 @@ endif
 " Some config from $VIMRUNTIME/mswin.vim
 if has("clipboard")
   " CTRL-X is Cut
-  vnoremap <C-X> "+x
+  vnoremap <C-X> "+xi
   " CTRL-C is Copy
-  vnoremap <C-C> "+y
+  vnoremap <C-C> "+yi
   " CTRL-V is Paste
   inoremap <C-V> "+gP
   if 1

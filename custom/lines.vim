@@ -43,11 +43,11 @@ function! MoveLineOrVisualUpOrDown(move_arg)
   execute "normal! ".col_num."|"
 endfunction
 
-nnoremap <silent> <A-Up> :<C-u>call MoveLineUp()<CR>
-nnoremap <silent> <A-Down> :<C-u>call MoveLineDown()<CR>
-inoremap <silent> <A-Up> <C-o>:call MoveLineUp()<CR>
-inoremap <silent> <A-Down> <C-o>:call MoveLineDown()<CR>
-vnoremap <silent> <A-Up> :<C-u>call MoveVisualUp()<CR>
-vnoremap <silent> <A-Down> :<C-u>call MoveVisualDown()<CR>
-xnoremap <silent> <A-Up> :<C-u>call MoveVisualUp()<CR>
-xnoremap <silent> <A-Down> :<C-u>call MoveVisualDown()<CR>
+nnoremap <silent> <M-Up> :<C-u>call MoveLineUp()<CR>
+nnoremap <silent> <M-Down> :<C-u>call MoveLineDown()<CR>
+inoremap <silent> <M-Up> <C-o>:call MoveLineUp()<CR>
+inoremap <silent> <M-Down> <C-o>:call MoveLineDown()<CR>
+vnoremap <silent> <M-Up> :<C-u>call MoveVisualUp()<CR>
+vnoremap <silent> <M-Down> :<C-u>call MoveVisualDown()<CR>
+xnoremap <silent> <M-Up> :<C-u>call MoveVisualUp()<CR>
+xnoremap <silent> <M-Down> :<C-u>call MoveVisualDown()<CR>
