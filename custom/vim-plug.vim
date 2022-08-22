@@ -16,7 +16,6 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 call plug#begin('~/.vim/bundle')
   Plug 'tpope/vim-surround'
   Plug 'tpope/vim-sensible'
-  Plug 'tpope/vim-rsi'
   Plug 'tpope/vim-commentary'
   Plug 'sheerun/vim-polyglot'
   Plug 'preservim/nerdtree'
