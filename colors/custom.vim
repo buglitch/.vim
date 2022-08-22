@@ -151,7 +151,7 @@ call <SID>set_colors("PMenuSbar"        , "White"       , "Grey25"          , ""
 call <SID>set_colors("PMenuThumb"       , "White"       , "Grey25"          , "")
 call <SID>set_colors("Question"         , "Magenta"    , ""             , "")
 call <SID>set_colors("Search"           , "Yellow", "Black", "reverse")
-call <SID>set_colors("SpecialKey"       , "Grey25"      , ""             , "")
+call <SID>set_colors("SpecialKey"       , "Blue"      , ""             , "")
 call <SID>set_colors("SpellBad"         , "DarkRed"   , "White"           , "reverse")
 call <SID>set_colors("SpellCap"         , ""         , "DarkRed"          , "reverse")
 call <SID>set_colors("SpellLocal"       , ""         , "DarkRed"          , "reverse")

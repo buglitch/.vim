@@ -12,5 +12,7 @@ else
   behave xterm
 endif
 
+nnoremap Y y$
+
 unmap <C-V>
 unmap <C-Y>
