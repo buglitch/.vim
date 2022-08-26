@@ -1,5 +1,6 @@
 " Vim color file based on Disco
 
+" Declarations {{{
 " We need to use :h color-nr numbers for cterm, in case we are on a low-color
 " terminal
 let s:color_map = {
@@ -34,9 +35,9 @@ else
     set t_Co=256
 endif
 
-" Sets the hi ghlighting for the given group. {{{
-" From github.com/jsit/vim-tomorrow-theme
-" Originally by Chris Kempson and contributors
+"" Sets the hi ghlighting for the given group. {{{
+"" From github.com/jsit/vim-tomorrow-theme
+"" Originally by Chris Kempson and contributors
 fun! <SID>set_colors(group, fg, bg, attr)
 
     if !empty(a:fg)
@@ -60,7 +61,7 @@ fun! <SID>set_colors(group, fg, bg, attr)
     endif
 
 endfun
-" }}}
+"" }}}
 
 hi clear
 
@@ -84,39 +85,156 @@ else
     let s:italic = 0
 endif
 
-" Set default gui colors
-if &background == "dark" && has('gui_running')
-    call <SID>set_colors("Normal"           , "White"      , "Black"      , ""                 )
-else
-    call <SID>set_colors("Normal"           , ""           , ""           , ""                 )
-endif
+" }}}
 
-" Improved defaults
-if s:gt_eight
-    call <SID>set_colors("Comment"          , "Grey50"     , ""           , ""                 ) "Default Cyan                   [Grey Comment if enough colors]
-    call <SID>set_colors("Identifier"       , "Cyan"       , ""           , "NONE"             ) "Default Cyan (Bold)            [Turn off bold if different from Comment]
-    call <SID>set_colors("Special"          , "DarkOrange1", ""           , ""                 ) "Default LightRed / Orange      [Orange if enough colors]
+" Improved defaults (ui) {{{
+if &background == "dark" && has('gui_running')
+    call <SID>set_colors("Normal"           , "White"      , "Black"      , "NONE"             )
 else
-    call <SID>set_colors("Comment"          , "Cyan"       , ""           , ""                 ) "Default Cyan                   [OK]
-    " Only turn off bold if we have enough colors
-    call <SID>set_colors("Identifier"       , "Cyan"       , ""           , ""                 ) "Default Cyan (Bold)            [OK]
-    call <SID>set_colors("Special"          , "Red"        , ""           , ""                 ) "Default LightRed / Orange      [OK]
+    call <SID>set_colors("Normal"           , ""           , ""           , "NONE"             ) "Default                              [OK]
+endif
+call     <SID>set_colors("ErrorMsg"         , "White"      , "DarkRed"    , ""                 ) "Default White / DarkRed              [OK]
+call     <SID>set_colors("IncSearch"        , ""           , ""           , "reverse"          ) "Default (Reverse)                    [OK]
+call     <SID>set_colors("ModeMsg"          , ""           , ""           , "bold"             ) "Default (Bold)                       [OK]
+call     <SID>set_colors("NonText"          , "Grey25"     , ""           , ""                 ) "Default Blue                         [Less visible NonText]
+call     <SID>set_colors("PMenuSbar"        , ""           , "Grey75"     , ""                 ) "Default Grey BG                      [OK]
+call     <SID>set_colors("StatusLine"       , ""           , ""           , "reverse,bold"     ) "Default (Reverse, Bold)              [OK]
+call     <SID>set_colors("StatusLineNC"     , ""           , ""           , "reverse"          ) "Default (Reverse)                    [OK]
+call     <SID>set_colors("TabLineFill"      , ""           , ""           , "reverse"          ) "Default (Reverse)                    [OK]
+call     <SID>set_colors("TabLineSel"       , ""           , ""           , "bold"             ) "Default (Bold)                       [OK]
+call     <SID>set_colors("VertSplit"        , ""           , ""           , "NONE"             ) "Default (Reverse)                    [Thiner line]
+
+"" Clipboard [TODO] {{{
+call     <SID>set_colors("VisualNOS"        , "Grey25"     , ""           , ""                 )
+"" }}}
+
+"" Gui {{{
+call     <SID>set_colors("Cursor"           , "NONE"       , "NONE"       , "reverse"          )
+call     <SID>set_colors("lCursor"          , "NONE"       , "NONE"       , "reverse"          )
+"" }}}
+
+" }}}
+
+" Improved defaults (ui) [dark background only] {{{
+if s:gt_eight
+    call <SID>set_colors("CursorLineNr"     , "Grey50"   , ""           , "NONE"             ) "Default Yellow (Underline)           [Use color instead]
+else
+    " Needs to be different from CursorLine
+    call <SID>set_colors("CursorLineNr"     , "Grey50"  , ""           , "NONE"             ) "Default Yellow (Underline)           [Use color instead]
+endif
+call     <SID>set_colors("Directory"        , "Cyan"       , ""           , ""                 ) "Default LightCyan                    [OK]
+call     <SID>set_colors("LineNr"           , "Grey25"     , ""           , ""                 ) "Default Yellow                       [Less visible LineNr]
+call     <SID>set_colors("MatchParen"       , ""           , "NONE"       , "underline,bold"   ) "Default / DarkCyan                   [Use underline and bold instead]
+call     <SID>set_colors("MoreMsg"          , "Green"      , ""           , ""                 ) "Default LightGreen                   [OK]
+call     <SID>set_colors("Pmenu"            , "Black"      , "Magenta"    , ""                 ) "Default Black / Magenta              [OK]
+call     <SID>set_colors("PmenuSel"         , "Grey25"     , "Black"      , ""                 ) "Default DarkGrey / Black             [OK]
+call     <SID>set_colors("PmenuThumb"       , ""           , "White"      , ""                 ) "Default / White                      [OK]
+call     <SID>set_colors("Question"         , "Green"      , ""           , ""                 ) "Default LightGreen                   [OK]
+call     <SID>set_colors("Search"           , "Yellow"     , "Black"      , "reverse"          ) "Default Yellow / Black (Reverse)     [OK]
+call     <SID>set_colors("SpecialKey"       , "Blue"       , ""           , ""                 ) "Default LightBlue                    [OK]
+call     <SID>set_colors("TabLine"          , "White"      , "Grey25"     , "NONE"             ) "Default White / DarkGrey (Underline) [No underline]
+call     <SID>set_colors("Title"            , "Magenta"    , ""           , ""                 ) "Default LightMagenta                 [OK]
+call     <SID>set_colors("Visual"           , ""           , "Grey25"     , ""                 ) "Default DarkGrey                     [OK]
+call     <SID>set_colors("WarningMsg"       , "Red"        , ""           , ""                 ) "Default LightRed                     [OK]
+
+" Default ui hi links
+hi  link CursorLineFold   FoldColumn
+hi  link EndOfBuffer      NonText
+hi  link CurSearch        Search
+hi  link QuickFixLine     Search
+hi  link CursorLineSign   SignColumn
+
+"" Spell [TODO] {{{
+call     <SID>set_colors("SpellBad"         , "DarkRed"    , "White"      , "reverse"          )
+call     <SID>set_colors("SpellCap"         , ""           , "DarkRed"    , "reverse"          )
+call     <SID>set_colors("SpellLocal"       , ""           , "DarkRed"    , "reverse"          )
+call     <SID>set_colors("SpellRare"        , "DarkRed"    , "White"      , "reverse"          )
+"" }}}
+
+"" Wild Menu [TODO] {{{
+call     <SID>set_colors("WildMenu"         , "Magenta"    , "Grey25"     , ""                 )
+"" }}}
+
+"" Folding [TODO] {{{
+if s:gt_eight
+    call <SID>set_colors("FoldColumn"       , "Grey50"     , "Grey25"     , ""                 )
+    call <SID>set_colors("Folded"           , "Grey50"     , "Grey25"     , ""                 )
+else
+    " Background needs to be different from foreground
+    call <SID>set_colors("FoldColumn"       , "NONE"       , "LightGray"  , ""                 )
+    call <SID>set_colors("Folded"           , "NONE"       , "LightGray"  , ""                 )
+endif
+"" }}}
+
+"" Signs {{{
+call     <SID>set_colors("SignColumn"       , "Grey50"     , "Black"      , ""                 ) "Default Cyan / DarkGrey              [More subtle SignColumn]
+"" }}}
+
+"" Git like diff [TODO] {{{
+call     <SID>set_colors("DiffAdd"          , "DarkGreen"  , "NONE"       , "NONE"             )
+call     <SID>set_colors("DiffDelete"       , "DarkRed"    , "NONE"       , "NONE"             )
+call     <SID>set_colors("DiffLine"         , "DarkCyan"   , "NONE"       , "NONE"             )
+call     <SID>set_colors("DiffText"         , "White"      , "NONE"       , "bold"             )
+hi! link diffFile         DiffText
+hi! link diffIndexLine    DiffText
+hi! link diffNewFile      DiffText
+hi! link diffOldFile      DiffText
+hi! link diffSubname      DiffText
+"" }}}
+
+"" Highlight [TODO] {{{
+call     <SID>set_colors("ColorColumn"      , ""           , "Grey25"     , ""                 )
+call     <SID>set_colors("CursorColumn"     , ""           , "DarkRed"    , ""                 )
+call     <SID>set_colors("CursorLine"       , ""           , ""           , "NONE"             )
+"" }}}
+
+"" Conceal [TODO] {{{
+call     <SID>set_colors("Conceal"          , ""           , "NONE"       , ""                 )
+"" }}}
+
+"" Terminal {{{
+call     <SID>set_colors("StatusLineTerm"   , "Magenta"    , "NONE"       , "reverse"          )
+call     <SID>set_colors("StatusLineTermNC" , "DarkMagenta", "NONE"       , "reverse"          )
+"" }}}
+
+"" Menu [TODO] {{{
+"ToolbarLine
+"ToolbarButton
+"" }}}
+
+" }}}
+
+" Improved defaults (syntax) {{{
+if s:italic
+    call <SID>set_colors("Todo"             , "Yellow"     , "Black"      , "reverse,italic"   ) "Default Black / Blue on Yellow       [Italic TODO if availible]
+else
+    call <SID>set_colors("Todo"             , "Yellow"     , "DarkBlue"   , "reverse"          ) "Default Black / Blue on Yellow       [Use blue text if no italic]
+endif
+call     <SID>set_colors("Error"            , "DarkRed"    , "White"      , "reverse"          ) "Default White on Red (Reverse)       [OK]
+" }}}
+
+" Improved defaults (syntax) [dark background only] {{{
+if s:gt_eight
+    call <SID>set_colors("Comment"          , "Grey50"     , ""           , ""                 ) "Default Cyan                         [Grey Comment if enough colors]
+    call <SID>set_colors("Identifier"       , "Cyan"       , ""           , "NONE"             ) "Default Cyan (Bold)                  [Turn off bold if different from Comment]
+    call <SID>set_colors("Special"          , "DarkOrange1", ""           , ""                 ) "Default LightRed / Orange            [Orange if enough colors]
+else
+    call <SID>set_colors("Comment"          , "Cyan"       , ""           , ""                 ) "Default Cyan                         [OK]
+    call <SID>set_colors("Identifier"       , "Cyan"       , ""           , "Bold"             ) "Default Cyan (Bold)                  [OK]
+    call <SID>set_colors("Special"          , "Red"        , ""           , ""                 ) "Default LightRed / Orange            [OK]
 endif
 if s:italic
-    call <SID>set_colors("Comment"          , ""           , ""           , "italic"           ) "Default Cyan                   [Italic Comments if availible]
-    call <SID>set_colors("Todo"             , "Yellow"     , "Black"      , "reverse,italic"   ) "Default Black / Blue on Yellow [Italic TODO if availible]
-else
-    call <SID>set_colors("Todo"             , "Yellow"     , "DarkBlue"   , "reverse"          ) "Default Black / Blue on Yellow [Use blue text if no italic]
+    call <SID>set_colors("Comment"          , ""           , ""           , "italic"           ) "Default Cyan                         [Italic Comments if availible]
 endif
-call     <SID>set_colors("Constant"         , "Magenta"    , ""           , ""                 ) "Default Magenta                [Ok]
-call     <SID>set_colors("Error"            , "DarkRed"    , "White"      , "reverse"          ) "Default White on Red (Reverse) [Ok]
-call     <SID>set_colors("Ignore"           , "Black"      , ""           , ""                 ) "Default Black                  [Ok]
-call     <SID>set_colors("PreProc"          , "Blue"       , ""           , ""                 ) "Default LightBlue              [Ok]
-call     <SID>set_colors("Statement"        , "Yellow"     , ""           , ""                 ) "Default Yellow                 [Ok]
-call     <SID>set_colors("Type"             , "Green"      , ""           , ""                 ) "Default Green                  [Ok]
-call     <SID>set_colors("Underlined"       , "Blue"       , ""           , "underline"        ) "Default LightBlue (Underline)  [Ok]
+call     <SID>set_colors("Constant"         , "Magenta"    , ""           , ""                 ) "Default Magenta                      [OK]
+call     <SID>set_colors("Ignore"           , "Black"      , ""           , ""                 ) "Default Black                        [OK]
+call     <SID>set_colors("PreProc"          , "Blue"       , ""           , ""                 ) "Default LightBlue                    [OK]
+call     <SID>set_colors("Statement"        , "Yellow"     , ""           , ""                 ) "Default Yellow                       [OK]
+call     <SID>set_colors("Type"             , "Green"      , ""           , ""                 ) "Default Green                        [OK]
+call     <SID>set_colors("Underlined"       , "Blue"       , ""           , "underline"        ) "Default LightBlue (Underline)        [OK]
+" }}}
 
-" Default hi links
+" Default syntax hi links {{{
 hi link  Function         Identifier
 hi link  Boolean          Constant
 hi link  Character        Constant
@@ -141,81 +259,11 @@ hi link  Repeat           Statement
 hi link  StorageClass     Type
 hi link  Structure        Type
 hi link  Typedef          Type
+" }}}
 
-"Additional hi link
+" Additional hi link {{{
 hi! link cIf0             Comment
-
-"Others
-if s:gt_eight
-    call <SID>set_colors("ColorColumn"      , ""           , "Grey25"     , ""                 )
-    call <SID>set_colors("CursorColumn"     , ""           , "Grey25"     , ""                 )
-    call <SID>set_colors("CursorLine"       , ""           , ""           , "NONE"             )
-    call <SID>set_colors("CursorLineNr"     , "DarkGray"   , ""           , ""                 )
-    call <SID>set_colors("PMenuSel"         , "Grey25"     , "Grey50"     , ""                 )
-    call <SID>set_colors("FoldColumn"       , "Grey50"     , "Grey25"     , ""                 )
-    call <SID>set_colors("Folded"           , "Grey50"     , "Grey25"     , ""                 )
-    call <SID>set_colors("SignColumn"       , "Grey50"     , "Grey25"     , ""                 )
-    call <SID>set_colors("VertSplit"        , "Grey50"     , "Grey50"     , "NONE"             )
-else
-    " Needs to be different from Comment
-    call <SID>set_colors("ColorColumn"      , "NONE"       , "NONE"       , ""                 )
-    call <SID>set_colors("CursorColumn"     , "NONE"       , "NONE"       , ""                 )
-    call <SID>set_colors("CursorLine"       , ""           , ""           , "NONE"             )
-    " Needs to be different from CursorLine
-    call <SID>set_colors("CursorLineNr"     , "LightGray"  , ""           , ""                 )
-    " Background needs to be different from foreground
-    call <SID>set_colors("FoldColumn"       , "NONE"       , "LightGray"  , ""                 )
-    call <SID>set_colors("Folded"           , "NONE"       , "LightGray"  , ""                 )
-    call <SID>set_colors("PMenuSel"         , "DarkGray"   , "White"      , ""                 )
-    call <SID>set_colors("SignColumn"       , "NONE"       , "LightGray"  , ""                 )
-    " Needs to be different from SignColumn
-    call <SID>set_colors("VertSplit"        , "White"      , "White"      , "reverse"          )
-endif
-call     <SID>set_colors("Conceal"          , ""           , "NONE"       , ""                 )
-call     <SID>set_colors("Cursor"           , "NONE"       , "NONE"       , "reverse"          )
-call     <SID>set_colors("CursorIM"         , ""           , ""           , ""                 )
-call     <SID>set_colors("DiffAdd"          , "DarkGreen"  , "NONE"       , ""                 )
-call     <SID>set_colors("DiffDelete"       , "DarkRed"    , "NONE"       , ""                 )
-call     <SID>set_colors("DiffLine"         , "DarkCyan"   , "NONE"       , ""                 )
-call     <SID>set_colors("DiffText"         , "White"      , "NONE"       , "bold"             )
-hi! link diffFile         DiffText
-hi! link diffIndexLine    DiffText
-hi! link diffNewFile      DiffText
-hi! link diffOldFile      DiffText
-hi! link diffSubname      DiffText
-call     <SID>set_colors("Directory"        , "Blue"       , ""           , ""                 )
-call     <SID>set_colors("ErrorMsg"         , "White"      , "DarkRed"    , ""                 )
-call     <SID>set_colors("IncSearch"        , "Yellow"     , "Black"      , "reverse"          )
-call     <SID>set_colors("InfoPopup"        , "White"      , "Grey25"     , ""                 )
-call     <SID>set_colors("MatchParen"       , ""           , "NONE"       , "underline,bold"   )
-call     <SID>set_colors("ModeMsg"          , "Magenta"    , ""           , ""                 )
-call     <SID>set_colors("MoreMsg"          , "Magenta"    , ""           , ""                 )
-call     <SID>set_colors("NonText"          , "Grey25"     , ""           , ""                 )
-hi! link EndOfBuffer      NonText
-hi! link LineNr           NonText
-call     <SID>set_colors("PMenu"            , "White"      , "Grey25"     , ""                 )
-call     <SID>set_colors("PMenuSbar"        , "White"      , "Grey25"     , ""                 )
-call     <SID>set_colors("PMenuThumb"       , "White"      , "Grey25"     , ""                 )
-call     <SID>set_colors("Question"         , "Magenta"    , ""           , ""                 )
-call     <SID>set_colors("Search"           , "Yellow"     , "Black"      , "reverse"          )
-call     <SID>set_colors("SpecialKey"       , "Blue"       , ""           , ""                 )
-call     <SID>set_colors("SpellBad"         , "DarkRed"    , "White"      , "reverse"          )
-call     <SID>set_colors("SpellCap"         , ""           , "DarkRed"    , "reverse"          )
-call     <SID>set_colors("SpellLocal"       , ""           , "DarkRed"    , "reverse"          )
-call     <SID>set_colors("SpellRare"        , "DarkRed"    , "White"      , "reverse"          )
-call     <SID>set_colors("StatusLine"       , ""           , ""           , "reverse"          )
-call     <SID>set_colors("StatusLineNC"     , "Grey25"     , ""           , ""                 )
-call     <SID>set_colors("StatusLineTerm"   , "Magenta"    , "NONE"       , "reverse"          )
-call     <SID>set_colors("StatusLineTermNC" , "DarkMagenta", "NONE"       , "reverse"          )
-call     <SID>set_colors("TabLine"          , "White"      , "Grey25"     , "NONE"             )
-call     <SID>set_colors("TabLineFill"      , "Grey25"     , "Grey50"     , ""                 )
-call     <SID>set_colors("TabLineSel"       , ""           , ""           , "NONE"             )
-call     <SID>set_colors("Title"            , "Magenta"    , ""           , "Bold"             )
-call     <SID>set_colors("Visual"           , ""           , "Grey25"     , ""                 )
-call     <SID>set_colors("VisualNOS"        , "Grey25"     , ""           , ""                 )
-call     <SID>set_colors("WarningMsg"       , "DarkRed"    , "NONE"       , ""                 )
-call     <SID>set_colors("WildMenu"         , "Magenta"    , "Grey25"     , ""                 )
-call     <SID>set_colors("logBrackets"      , "DarkCyan"   , ""           , ""                 )
+" }}}
 
 " Clean up
 delf     <SID>set_colors
