@@ -1,21 +1,19 @@
 " Common mappings
-inoremap <Down>  <C-O>gj
-inoremap <Up>    <C-O>gk
-
-nnoremap <Left>  h
-nnoremap <Down>  gj
-nnoremap <Up>    gk
-nnoremap <Right> l
-
-vnoremap <Left>  h
-vnoremap <Down>  gj
-vnoremap <Up>    gk
-vnoremap <Right> l
-
 nnoremap Q @q
 nnoremap Y y$
 vnoremap > >gv
 vnoremap < <gv
+
+" Scroll by visual lines
+inoremap <Down>  <C-O>gj
+inoremap <Up>    <C-O>gk
+nnoremap <Down>  gj
+nnoremap <Up>    gk
+vnoremap <Down>  gj
+vnoremap <Up>    gk
+
+" Shift selection
+set keymodel=startsel
 
 " Some config from $VIMRUNTIME/mswin.vim
 if has("clipboard")
