@@ -41,7 +41,7 @@ let g:AutoPairs = {
   \"'''":"'''",
   \"<":">"
 \}
-let g:AutoPairsShortcutToggle=''
+let g:AutoPairsShortcutToggle='<F7>'
 let g:NERDTreeDirArrows=1
 let g:NERDTreeMinimalUI=1
 let g:gitgutter_enabled=0
