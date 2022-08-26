@@ -1,8 +1,6 @@
-" Vim color file based on Disco
+" Defim (DEFault IMproved) Vim color file 
 
 " Declarations {{{
-" We need to use :h color-nr numbers for cterm, in case we are on a low-color
-" terminal
 let s:color_map = {
     \'Black'         : 0,
     \'DarkRed'       : 1,
@@ -97,7 +95,7 @@ call     <SID>set_colors("ErrorMsg"         , "White"      , "DarkRed"    , ""  
 call     <SID>set_colors("IncSearch"        , ""           , ""           , "reverse"          ) "Default (Reverse)                    [OK]
 call     <SID>set_colors("ModeMsg"          , ""           , ""           , "bold"             ) "Default (Bold)                       [OK]
 call     <SID>set_colors("NonText"          , "Grey25"     , ""           , ""                 ) "Default Blue                         [Less visible NonText]
-call     <SID>set_colors("PMenuSbar"        , ""           , "Grey75"     , ""                 ) "Default Grey BG                      [OK]
+call     <SID>set_colors("PMenuSbar"        , ""           , "Grey50"     , ""                 ) "Default Grey BG                      [OK]
 call     <SID>set_colors("StatusLine"       , ""           , ""           , "reverse,bold"     ) "Default (Reverse, Bold)              [OK]
 call     <SID>set_colors("StatusLineNC"     , ""           , ""           , "reverse"          ) "Default (Reverse)                    [OK]
 call     <SID>set_colors("TabLineFill"      , ""           , ""           , "reverse"          ) "Default (Reverse)                    [OK]
@@ -137,13 +135,6 @@ call     <SID>set_colors("Title"            , "Magenta"    , ""           , ""  
 call     <SID>set_colors("Visual"           , ""           , "Grey25"     , ""                 ) "Default DarkGrey                     [OK]
 call     <SID>set_colors("WarningMsg"       , "Red"        , ""           , ""                 ) "Default LightRed                     [OK]
 
-" Default ui hi links
-hi  link CursorLineFold   FoldColumn
-hi  link EndOfBuffer      NonText
-hi  link CurSearch        Search
-hi  link QuickFixLine     Search
-hi  link CursorLineSign   SignColumn
-
 "" Spell [TODO] {{{
 call     <SID>set_colors("SpellBad"         , "DarkRed"    , "White"      , "reverse"          )
 call     <SID>set_colors("SpellCap"         , ""           , "DarkRed"    , "reverse"          )
@@ -151,18 +142,18 @@ call     <SID>set_colors("SpellLocal"       , ""           , "DarkRed"    , "rev
 call     <SID>set_colors("SpellRare"        , "DarkRed"    , "White"      , "reverse"          )
 "" }}}
 
-"" Wild Menu [TODO] {{{
-call     <SID>set_colors("WildMenu"         , "Magenta"    , "Grey25"     , ""                 )
+"" Wild Menu {{{
+call     <SID>set_colors("WildMenu"         , "Black"      , "Yellow"     , ""                 ) "Default Black / Yellow               [OK]
 "" }}}
 
-"" Folding [TODO] {{{
+"" Folding {{{
 if s:gt_eight
-    call <SID>set_colors("FoldColumn"       , "Grey50"     , "Grey25"     , ""                 )
-    call <SID>set_colors("Folded"           , "Grey50"     , "Grey25"     , ""                 )
+    call <SID>set_colors("FoldColumn"       , "Grey50"     , "Grey25"     , ""                 ) "Default Cyan / DarkGrey              [Greyscale only]
+    call <SID>set_colors("Folded"           , "Grey50"     , "Grey25"     , ""                 ) "Default Cyan / DarkGrey              [Greyscale only]
 else
     " Background needs to be different from foreground
-    call <SID>set_colors("FoldColumn"       , "NONE"       , "LightGray"  , ""                 )
-    call <SID>set_colors("Folded"           , "NONE"       , "LightGray"  , ""                 )
+    call <SID>set_colors("FoldColumn"       , "Cyan"       , "Grey25"     , ""                 ) "Default Cyan / DarkGrey              [OK]
+    call <SID>set_colors("Folded"           , "Cyan"       , "Grey25"     , ""                 ) "Default Cyan / DarkGrey              [OK]
 endif
 "" }}}
 
@@ -170,22 +161,17 @@ endif
 call     <SID>set_colors("SignColumn"       , "Grey50"     , "Black"      , ""                 ) "Default Cyan / DarkGrey              [More subtle SignColumn]
 "" }}}
 
-"" Git like diff [TODO] {{{
+"" Diff [TODO] {{{
 call     <SID>set_colors("DiffAdd"          , "DarkGreen"  , "NONE"       , "NONE"             )
 call     <SID>set_colors("DiffDelete"       , "DarkRed"    , "NONE"       , "NONE"             )
 call     <SID>set_colors("DiffLine"         , "DarkCyan"   , "NONE"       , "NONE"             )
 call     <SID>set_colors("DiffText"         , "White"      , "NONE"       , "bold"             )
-hi! link diffFile         DiffText
-hi! link diffIndexLine    DiffText
-hi! link diffNewFile      DiffText
-hi! link diffOldFile      DiffText
-hi! link diffSubname      DiffText
 "" }}}
 
-"" Highlight [TODO] {{{
-call     <SID>set_colors("ColorColumn"      , ""           , "DarkRed"    , ""                 )
-call     <SID>set_colors("CursorColumn"     , ""           , "Grey25"     , ""                 )
-call     <SID>set_colors("CursorLine"       , ""           , ""           , "NONE"             )
+"" Highlight {{{
+call     <SID>set_colors("ColorColumn"      , ""           , "DarkRed"    , ""                 ) "Default / DarkRed                    [OK]
+call     <SID>set_colors("CursorColumn"     , ""           , "Grey25"     , ""                 ) "Default / DarkGrey                   [OK]
+call     <SID>set_colors("CursorLine"       , ""           , ""           , "NONE"             ) "Default (Underline)                  [Only CursorLineNr is visible]
 "" }}}
 
 "" Conceal [TODO] {{{
@@ -193,8 +179,8 @@ call     <SID>set_colors("Conceal"          , ""           , "NONE"       , ""  
 "" }}}
 
 "" Terminal {{{
-call     <SID>set_colors("StatusLineTerm"   , "Magenta"    , "NONE"       , "reverse"          )
-call     <SID>set_colors("StatusLineTermNC" , "DarkMagenta", "NONE"       , "reverse"          )
+call     <SID>set_colors("StatusLineTerm"   , "Black"      , "Green"      , "bold"             ) "Default Black / LightGreen (Bold)    [OK]
+call     <SID>set_colors("StatusLineTermNC" , "Black"      , "Green"      , ""                 ) "Default Black / LightGreen           [OK]
 "" }}}
 
 "" Menu [TODO] {{{
@@ -202,6 +188,14 @@ call     <SID>set_colors("StatusLineTermNC" , "DarkMagenta", "NONE"       , "rev
 "ToolbarButton
 "" }}}
 
+" }}}
+
+" Default ui hi links {{{
+hi  link CursorLineFold   FoldColumn
+hi  link EndOfBuffer      NonText
+hi  link CurSearch        Search
+hi  link QuickFixLine     Search
+hi  link CursorLineSign   SignColumn
 " }}}
 
 " Improved defaults (syntax) {{{
@@ -261,11 +255,17 @@ hi link  Structure        Type
 hi link  Typedef          Type
 " }}}
 
-" Additional hi link {{{
+" Additional hi links {{{
 hi! link cIf0             Comment
+hi! link diffFile         DiffText
+hi! link diffIndexLine    DiffText
+hi! link diffNewFile      DiffText
+hi! link diffOldFile      DiffText
+hi! link diffSubname      DiffText
 " }}}
 
-" Clean up
+" Clean up {{{
 delf     <SID>set_colors
+" }}}
 
 " ex: set foldmethod=marker:
