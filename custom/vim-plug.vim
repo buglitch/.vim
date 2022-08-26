@@ -23,11 +23,25 @@ call plug#begin('~/.vim/bundle')
   Plug 'michaelb/vim-tips'
   Plug 'junegunn/goyo.vim'
   Plug 'jistr/vim-nerdtree-tabs'
+  Plug 'jiangmiao/auto-pairs'
   Plug 'airblade/vim-gitgutter'
   Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
 " Config
+let g:AutoPairs = {
+  \'(':')',
+  \'[':']',
+  \'{':'}',
+  \"'":"'",
+  \'"':'"',
+  \"`":"`",
+  \'```':'```',
+  \'"""':'"""',
+  \"'''":"'''",
+  \"<":">"
+\}
+let g:AutoPairsShortcutToggle=''
 let g:NERDTreeDirArrows=1
 let g:NERDTreeMinimalUI=1
 let g:gitgutter_enabled=0
