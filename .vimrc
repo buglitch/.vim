@@ -52,7 +52,7 @@ source ~/.vim/custom/vim-plug.vim
 source ~/.vim/custom/edit.vim
 source ~/.vim/custom/functions.vim
 source ~/.vim/custom/lines.vim
-source ~/.vim/custom/tabs.vim
+source ~/.vim/custom/navigation.vim
 source ~/.vim/custom/term.vim
 
 " colorscheme
