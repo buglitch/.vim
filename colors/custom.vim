@@ -183,8 +183,8 @@ hi! link diffSubname      DiffText
 "" }}}
 
 "" Highlight [TODO] {{{
-call     <SID>set_colors("ColorColumn"      , ""           , "Grey25"     , ""                 )
-call     <SID>set_colors("CursorColumn"     , ""           , "DarkRed"    , ""                 )
+call     <SID>set_colors("ColorColumn"      , ""           , "DarkRed"    , ""                 )
+call     <SID>set_colors("CursorColumn"     , ""           , "Grey25"     , ""                 )
 call     <SID>set_colors("CursorLine"       , ""           , ""           , "NONE"             )
 "" }}}
 
