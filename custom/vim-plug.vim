@@ -46,7 +46,10 @@ let g:NERDTreeDirArrows=1
 let g:NERDTreeMinimalUI=1
 let g:gitgutter_enabled=0
 
+
 " Mapping
+nmap <C-K> :pyf /usr/share/clang/clang-format-7/clang-format.py<CR>
+
 nnoremap <silent> <F1> :Goyo<CR>
 inoremap <silent> <F1> <C-O>:Goyo<CR>
 
