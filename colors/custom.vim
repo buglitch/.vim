@@ -102,9 +102,13 @@ call     <SID>set_colors("TabLineFill"      , ""           , ""           , "rev
 call     <SID>set_colors("TabLineSel"       , ""           , ""           , "bold"             ) "Default (Bold)                       [OK]
 call     <SID>set_colors("VertSplit"        , ""           , ""           , "NONE"             ) "Default (Reverse)                    [Thiner line]
 
-"" Clipboard [TODO] {{{
-call     <SID>set_colors("VisualNOS"        , "Grey25"     , ""           , ""                 )
+"" Clipboard {{{
+call     <SID>set_colors("VisualNOS"        , ""           , ""           , "underline,bold"   ) "Default (Underline, Bold)            [OK]
 "" }}}
+
+"" Diff {{{
+call     <SID>set_colors("DiffText"         , ""           , "NONE"       , "bold"             ) "Default / Red (Bold)                 [No background]
+" }}}
 
 "" Gui {{{
 call     <SID>set_colors("Cursor"           , "NONE"       , "NONE"       , "reverse"          )
@@ -135,11 +139,11 @@ call     <SID>set_colors("Title"            , "Magenta"    , ""           , ""  
 call     <SID>set_colors("Visual"           , ""           , "Grey25"     , ""                 ) "Default DarkGrey                     [OK]
 call     <SID>set_colors("WarningMsg"       , "Red"        , ""           , ""                 ) "Default LightRed                     [OK]
 
-"" Spell [TODO] {{{
-call     <SID>set_colors("SpellBad"         , "DarkRed"    , "White"      , "reverse"          )
-call     <SID>set_colors("SpellCap"         , ""           , "DarkRed"    , "reverse"          )
-call     <SID>set_colors("SpellLocal"       , ""           , "DarkRed"    , "reverse"          )
-call     <SID>set_colors("SpellRare"        , "DarkRed"    , "White"      , "reverse"          )
+"" Spell {{{
+call     <SID>set_colors("SpellBad"         , ""           , "Red"        , ""                 ) "Default / LightRed                   [OK]
+call     <SID>set_colors("SpellCap"         , ""           , "Blue"       , ""                 ) "Default / LightBlue                  [OK]
+call     <SID>set_colors("SpellLocal"       , ""           , "Magenta"    , ""                 ) "Default / LightMagenta               [OK]
+call     <SID>set_colors("SpellRare"        , ""           , "Cyan"       , ""                 ) "Default / Cyan                       [OK]
 "" }}}
 
 "" Wild Menu {{{
@@ -161,11 +165,10 @@ endif
 call     <SID>set_colors("SignColumn"       , "Grey50"     , "Black"      , ""                 ) "Default Cyan / DarkGrey              [More subtle SignColumn]
 "" }}}
 
-"" Diff [TODO] {{{
-call     <SID>set_colors("DiffAdd"          , "DarkGreen"  , "NONE"       , "NONE"             )
-call     <SID>set_colors("DiffDelete"       , "DarkRed"    , "NONE"       , "NONE"             )
-call     <SID>set_colors("DiffLine"         , "DarkCyan"   , "NONE"       , "NONE"             )
-call     <SID>set_colors("DiffText"         , "White"      , "NONE"       , "bold"             )
+"" Diff {{{
+call     <SID>set_colors("DiffAdd"          , "DarkGreen"  , "NONE"       , "NONE"             ) "Default / LightBlue                  [Git diff highlight]
+call     <SID>set_colors("DiffDelete"       , "DarkRed"    , "NONE"       , "NONE"             ) "Default Blue / LightCyan             [Git diff highlight]
+call     <SID>set_colors("DiffLine"         , "DarkCyan"   , "NONE"       , "NONE"             ) "Default NONE                         [Git diff highlight]
 "" }}}
 
 "" Highlight {{{
@@ -174,8 +177,8 @@ call     <SID>set_colors("CursorColumn"     , ""           , "Grey25"     , ""  
 call     <SID>set_colors("CursorLine"       , ""           , ""           , "NONE"             ) "Default (Underline)                  [Only CursorLineNr is visible]
 "" }}}
 
-"" Conceal [TODO] {{{
-call     <SID>set_colors("Conceal"          , ""           , "NONE"       , ""                 )
+"" Conceal {{{
+call     <SID>set_colors("Conceal"          , "Grey50"     , "Grey25"     , ""                 ) "Default LightGrey / DarkGrey         [OK]
 "" }}}
 
 "" Terminal {{{
@@ -183,9 +186,9 @@ call     <SID>set_colors("StatusLineTerm"   , "Black"      , "Green"      , "bol
 call     <SID>set_colors("StatusLineTermNC" , "Black"      , "Green"      , ""                 ) "Default Black / LightGreen           [OK]
 "" }}}
 
-"" Menu [TODO] {{{
-"ToolbarLine
-"ToolbarButton
+"" Menu {{{
+call <SID>set_colors("ToolbarLine"          , ""           , "Grey50"     , ""                 ) "Default / LightGrey                  [OK]
+call <SID>set_colors("ToolbarButton"        , "White"      , "Grey25"     , "bold"             ) "Default White / DarkGrey (Bold)      [OK]
 "" }}}
 
 " }}}
