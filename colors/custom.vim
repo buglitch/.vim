@@ -87,7 +87,7 @@ endif
 
 " Improved defaults (ui) {{{
 if &background == "dark" && has('gui_running')
-    call <SID>set_colors("Normal"           , "White"      , "Black"      , "NONE"             )
+    call <SID>set_colors("Normal"           , "White"      , "Black"      , "NONE"             ) "Default                              [Set dark background]
 else
     call <SID>set_colors("Normal"           , ""           , ""           , "NONE"             ) "Default                              [OK]
 endif
@@ -111,19 +111,14 @@ call     <SID>set_colors("DiffText"         , ""           , "NONE"       , "bol
 " }}}
 
 "" Gui {{{
-call     <SID>set_colors("Cursor"           , "NONE"       , "NONE"       , "reverse"          )
-call     <SID>set_colors("lCursor"          , "NONE"       , "NONE"       , "reverse"          )
+call     <SID>set_colors("Cursor"           , "NONE"       , "NONE"       , "reverse"          ) "Default Bg / Fg                      [OK, Reverse]
+call     <SID>set_colors("lCursor"          , "NONE"       , "NONE"       , "reverse"          ) "Default Bg / Fg                      [OK, Reverse]
 "" }}}
 
 " }}}
 
 " Improved defaults (ui) [dark background only] {{{
-if s:gt_eight
-    call <SID>set_colors("CursorLineNr"     , "Grey50"   , ""           , "NONE"             ) "Default Yellow (Underline)           [Use color instead]
-else
-    " Needs to be different from CursorLine
-    call <SID>set_colors("CursorLineNr"     , "Grey50"  , ""           , "NONE"             ) "Default Yellow (Underline)           [Use color instead]
-endif
+call     <SID>set_colors("CursorLineNr"     , "Grey50"     , ""           , "NONE"             ) "Default Yellow (Underline)           [Use color instead]
 call     <SID>set_colors("Directory"        , "Cyan"       , ""           , ""                 ) "Default LightCyan                    [OK]
 call     <SID>set_colors("LineNr"           , "Grey25"     , ""           , ""                 ) "Default Yellow                       [Less visible LineNr]
 call     <SID>set_colors("MatchParen"       , ""           , "NONE"       , "underline,bold"   ) "Default / DarkCyan                   [Use underline and bold instead]
