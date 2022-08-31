@@ -19,6 +19,7 @@ call plug#begin('~/.vim/bundle')
   Plug 'tpope/vim-commentary'
   Plug 'sheerun/vim-polyglot'
   Plug 'preservim/nerdtree'
+  Plug 'ntpeters/vim-better-whitespace'
   Plug 'mkitt/tabline.vim'
   Plug 'michaelb/vim-tips'
   Plug 'junegunn/goyo.vim'
@@ -45,7 +46,6 @@ let g:AutoPairsShortcutToggle='<F7>'
 let g:NERDTreeDirArrows=1
 let g:NERDTreeMinimalUI=1
 let g:gitgutter_enabled=0
-
 
 " Mapping
 nmap <C-K> :pyf /usr/share/clang/clang-format-7/clang-format.py<CR>

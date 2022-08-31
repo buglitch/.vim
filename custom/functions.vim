@@ -33,6 +33,8 @@ inoremap <silent> <M-%> <C-O>:bufdo e<CR>
 
 "vim-plug: <F6> :GitGutterToggle
 
+"vim-plug: g:AutoPairsShortcutToggle='<F7>'
+
 nm <silent> <F9> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name")
     \ . '> trans<' . synIDattr(synID(line("."),col("."),0),"name")
     \ . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name")

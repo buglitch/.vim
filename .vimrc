@@ -38,10 +38,6 @@ set smartcase
 set clipboard=unnamed
 set clipboard^=unnamedplus
 
-" space errors
-let c_space_errors=1
-let python_space_errors=1
-
 " runtimepath
 set runtimepath+=~/.vim
 

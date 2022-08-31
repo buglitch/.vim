@@ -1,4 +1,4 @@
-" Defim (DEFault IMproved) Vim color file 
+" Defim (DEFault IMproved) Vim color file
 
 " Declarations {{{
 let s:color_map = {
@@ -70,7 +70,7 @@ endif
 let g:colors_name = "custom"
 
 " Check to see if we can do colors 8-15
-if has('gui_running') || ((&t_Co > 8) && $TERM != 'linux') 
+if has('gui_running') || ((&t_Co > 8) && $TERM != 'linux')
     let s:gt_eight = 1
 else
     let s:gt_eight = 0
@@ -260,6 +260,7 @@ hi! link diffIndexLine    DiffText
 hi! link diffNewFile      DiffText
 hi! link diffOldFile      DiffText
 hi! link diffSubname      DiffText
+hi! link ExtraWhitespace  ColorColumn
 " }}}
 
 " Clean up {{{
