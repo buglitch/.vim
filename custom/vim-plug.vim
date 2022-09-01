@@ -14,9 +14,9 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 " Plugings
 call plug#begin('~/.vim/bundle')
-  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-surround'             "gs
   Plug 'tpope/vim-sensible'
-  Plug 'tpope/vim-commentary'
+  Plug 'tpope/vim-commentary'           "gc
   Plug 'sheerun/vim-polyglot'
   Plug 'preservim/nerdtree'
   Plug 'ntpeters/vim-better-whitespace'
@@ -25,6 +25,7 @@ call plug#begin('~/.vim/bundle')
   Plug 'junegunn/goyo.vim'
   Plug 'jistr/vim-nerdtree-tabs'
   Plug 'jiangmiao/auto-pairs'
+  Plug 'godlygeek/tabular'
   Plug 'airblade/vim-gitgutter'
   Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
