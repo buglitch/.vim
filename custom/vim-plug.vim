@@ -14,7 +14,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 " Plugings
 call plug#begin('~/.vim/bundle')
-  Plug 'tpope/vim-surround'             "gs
+  Plug 'tpope/vim-surround'             "cs ds ys
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-commentary'           "gc
   Plug 'sheerun/vim-polyglot'
