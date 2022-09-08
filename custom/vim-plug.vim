@@ -48,6 +48,9 @@ let g:NERDTreeDirArrows=1
 let g:NERDTreeMinimalUI=1
 let g:gitgutter_enabled=0
 
+autocmd FileType c   setlocal commentstring=//\ %s
+autocmd FileType cpp setlocal commentstring=//\ %s
+
 " Mapping
 nmap <C-K> :pyf /usr/share/clang/clang-format-7/clang-format.py<CR>
 
