@@ -29,7 +29,7 @@ imap <S-Right> <Esc>lv
 " Set behavior
 behave xterm
 
-" Some config from $VIMRUNTIME/mswin.vim
+" Tweaked config from $VIMRUNTIME/mswin.vim
 if has("clipboard")
     " CTRL-X is Cut (visual selection)
     vnoremap <C-X> "+xi
@@ -49,12 +49,12 @@ endif
 inoremap <C-Z> <C-O>u
 " CTRL-Y is Redo (insert mode)
 inoremap <C-Y> <C-O><C-R>
-" CTRL-A is Select all (insert mode)
-inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
+" CTRL-A is Visual select all (insert mode)
+inoremap <C-A> <C-O>gg<C-O>v<C-O>G
 " backspace and cursor keys wrap to previous/next line
 set backspace=indent,eol,start whichwrap+=<,>,[,]
-" backspace in Visual mode deletes selection
-vnoremap <BS> d
+" backspace in Visual mode deletes selection and goes to Insert mode
+vnoremap <BS> di
 
 " Command mode readline key bindings from tpope/vim-rsi
 cnoremap        <C-A> <Home>
