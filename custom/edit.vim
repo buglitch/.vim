@@ -22,7 +22,7 @@ vmap <S-Down> <Down>
 vmap <S-Left> <Left>
 vmap <S-Right> <Right>
 imap <S-Up> <Esc>v<Up><Right>
-imap <S-Down> <Esc>lv<Down><Left>
+imap <S-Down> <Esc>lv<Down>
 imap <S-Left> <Esc>v
 imap <S-Right> <Esc>lv
 
@@ -50,7 +50,7 @@ inoremap <C-Z> <C-O>u
 " CTRL-Y is Redo (insert mode)
 inoremap <C-Y> <C-O><C-R>
 " CTRL-A is Visual select all (insert mode)
-inoremap <C-A> <C-O>gg<C-O>v<C-O>G
+inoremap <C-A> <Esc>ggvG<End>
 " backspace and cursor keys wrap to previous/next line
 set backspace=indent,eol,start whichwrap+=<,>,[,]
 " backspace in Visual mode deletes selection and goes to Insert mode
