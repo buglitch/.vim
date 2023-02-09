@@ -35,7 +35,7 @@
 
 let g:defim_best           = get(g:, 'defim_best', 0)
 
-if g:defim_best == 1                                                                                                  
+if g:defim_best == 1
     let g:defim_better     = 1
 else
     let g:defim_better     = get(g:, 'defim_better', 0)
@@ -189,7 +189,7 @@ call     <SID>set_colors("lCursor"          , "NONE"       , "NONE"       , "rev
 " }}}
 
 " Improved defaults (ui) [dark background only] {{{
-call     <SID>set_colors("Directory"        , "Cyan"       , ""           , ""                 ) "Default LightCyan                    [OK]                    
+call     <SID>set_colors("Directory"        , "Cyan"       , ""           , ""                 ) "Default LightCyan                    [OK]
 if g:defim_grey == 1
     call <SID>set_colors("CursorLineNr"     , s:LightGrey  , ""           , "NONE"             ) "Default Yellow (Underline)           [More subtle CursorLineNr]
     call <SID>set_colors("LineNr"           , s:DarkGrey   , ""           , ""                 ) "Default Yellow                       [More subtle LineNr]
