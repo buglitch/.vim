@@ -7,11 +7,6 @@
 "
 " Options
 "
-" g:defim_dimer: If set to 1, use Grey25 and Grey50 instead of DarkGray and
-" LightGray for a dimer look if supported (Default 0)
-"
-" g:defim_grey: If set to 1, use grey for comments and line number (Default 0)
-"
 " g:defim_italic: If set to 1, use italic to differientiate comments and todos
 " instead if supported (Default 0)
 "
@@ -19,6 +14,13 @@
 " highlighting when used in gui default if supported (Default 0)
 "
 " g:defim_better: If set to 1, sets all of the unset above to 1 (Default 0)
+"
+" g:defim_dimer: If set to 1, use Grey25 and Grey50 instead of DarkGray and
+" LightGray for a dimer look if supported (Default 0)
+"
+" g:defim_grey: If set to 1, use grey for comments and line number (Default 0)
+"
+" g:defim_best: If set to 1, sets all of the unset above to 1 (Default 0)
 "
 " g:defim_git_diff: If set to 1, uses git diff highlight instead of vim's
 " default (Default 1)
@@ -31,12 +33,19 @@
 " g:defim_no_cursorline: If set to 1, the cursorline is invisible and only the
 " line number is highlighted (Default 0)
 
-let g:defim_better         = get(g:, 'defim_better', 0) "0
+let g:defim_best           = get(g:, 'defim_best', 0)
 
-let g:defim_dimer          = get(g:, 'defim_dimer', g:defim_better)
-let g:defim_grey           = get(g:, 'defim_grey', g:defim_better)
+if g:defim_best == 1                                                                                                  
+    let g:defim_better     = 1
+else
+    let g:defim_better     = get(g:, 'defim_better', 0)
+endif
+
 let g:defim_italic         = get(g:, 'defim_italic', g:defim_better)
 let g:defim_orange         = get(g:, 'defim_orange', g:defim_better)
+
+let g:defim_dimer          = get(g:, 'defim_dimer', g:defim_best)
+let g:defim_grey           = get(g:, 'defim_grey', g:defim_best)
 
 let g:defim_git_diff       = get(g:, 'defim_git_diff', 1)
 let g:defim_no_underline   = get(g:, 'defim_no_underline', 1)
@@ -180,11 +189,12 @@ call     <SID>set_colors("lCursor"          , "NONE"       , "NONE"       , "rev
 " }}}
 
 " Improved defaults (ui) [dark background only] {{{
-call     <SID>set_colors("CursorLineNr"     , "Yellow"     , ""           , "underline"        ) "Default Yellow (Underline)           [OK]
-call     <SID>set_colors("Directory"        , "Cyan"       , ""           , ""                 ) "Default LightCyan                    [OK]
+call     <SID>set_colors("Directory"        , "Cyan"       , ""           , ""                 ) "Default LightCyan                    [OK]                    
 if g:defim_grey == 1
-    call <SID>set_colors("LineNr"           , s:DarkGrey   , ""           , ""                 ) "Default Yellow                       [Less visible LineNr]
+    call <SID>set_colors("CursorLineNr"     , s:LightGrey  , ""           , "NONE"             ) "Default Yellow (Underline)           [More subtle CursorLineNr]
+    call <SID>set_colors("LineNr"           , s:DarkGrey   , ""           , ""                 ) "Default Yellow                       [More subtle LineNr]
 else
+    call <SID>set_colors("CursorLineNr"     , "Yellow"     , ""           , "underline"        ) "Default Yellow (Underline)           [OK]
     call <SID>set_colors("LineNr"           , "Yellow"     , ""           , ""                 ) "Default Yellow                       [OK]
 endif
 call     <SID>set_colors("MatchParen"       , ""           , "DarkCyan"   , ""                 ) "Default / DarkCyan                   [OK]
