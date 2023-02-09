@@ -286,7 +286,6 @@ hi  link CursorLineSign   SignColumn
 " }}}
 
 " Improved defaults (syntax) {{{
-
 if s:italic
     call <SID>set_colors("Todo"             , "Black"      , "Yellow"     , "italic"           ) "Default Black / Blue on Yellow       [Italic TODO if availible]
 else
@@ -296,7 +295,6 @@ call     <SID>set_colors("Error"            , "DarkRed"    , "White"      , "rev
 " }}}
 
 " Improved defaults (syntax) [dark background only] {{{
-
 if g:defim_grey == 1
     call <SID>set_colors("Comment"          , s:LightGrey  , ""           , ""                 ) "Default Cyan                         [Grey Comment]
     call <SID>set_colors("Identifier"       , "Cyan"       , ""           , "NONE"             ) "Default Cyan (Bold)                  [Turn off bold if different from Comment]
