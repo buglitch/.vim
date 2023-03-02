@@ -246,8 +246,8 @@ if g:defim_git_diff == 1
     call <SID>set_colors("DiffDelete"       , "DarkRed"    , "NONE"       , "NONE"             ) "Default Blue / LightCyan             [Git diff highlight]
     call <SID>set_colors("DiffLine"         , "DarkCyan"   , "NONE"       , "NONE"             ) "Default NONE                         [Git diff highlight]
 else
-    call <SID>set_colors("DiffAdd"          , ""           , "Blue"       , ""                 ) "Default / LightBlue                  [Git diff highlight]
-    call <SID>set_colors("DiffDelete"       , "DarkBlue"   , "Cyan"       , ""                 ) "Default Blue / LightCyan             [Git diff highlight]
+    call <SID>set_colors("DiffAdd"          , ""           , "Blue"       , ""                 ) "Default / LightBlue                  [OK]
+    call <SID>set_colors("DiffDelete"       , "DarkBlue"   , "Cyan"       , ""                 ) "Default Blue / LightCyan             [OK]
 endif
 "" }}}
 
