@@ -28,6 +28,7 @@ call plug#begin('~/.vim/bundle')
   Plug 'godlygeek/tabular'
   Plug 'airblade/vim-gitgutter'
   Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'mjbrownie/vim-markdown-yank'
 call plug#end()
 
 " Config
@@ -62,3 +63,5 @@ inoremap <silent> <F2> <C-O>:NERDTreeTabsToggle<CR>
 
 nnoremap <silent> <F6> :GitGutterToggle<CR>
 inoremap <silent> <F6> <C-O>:GitGutterToggle<CR>
+
+vnoremap <F8> :call MarkdownCodeYank()<CR>
