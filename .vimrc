@@ -52,4 +52,6 @@ source ~/.vim/custom/navigation.vim
 source ~/.vim/custom/term.vim
 
 " colorscheme
-colorscheme custom
+let g:defim_best = 1
+let g:defim_no_cursorline = 1
+colorscheme defim
