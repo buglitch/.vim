@@ -94,6 +94,8 @@ let s:color_map = {
 
 set background=dark
 
+set notermguicolors
+
 if $TERM == 'linux'
     set t_Co=8
 else
