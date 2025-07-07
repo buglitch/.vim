@@ -27,7 +27,7 @@ imap <S-Left> <Esc>v
 imap <S-Right> <Esc>lv
 
 " Set behavior
-behave xterm
+"behave xterm
 
 " Tweaked config from $VIMRUNTIME/mswin.vim
 if has("clipboard")
