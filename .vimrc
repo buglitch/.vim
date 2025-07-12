@@ -13,6 +13,8 @@ set scrolloff=4
 set sidescrolloff=8
 set title
 set undofile
+aunmenu PopUp.How-to\ disable\ mouse
+aunmenu PopUp.-2-
 
 " indent
 set autoindent
