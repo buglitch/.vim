@@ -29,6 +29,7 @@ call plug#begin('~/.vim/bundle')
   Plug 'airblade/vim-gitgutter'
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'mjbrownie/vim-markdown-yank'
+  Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 call plug#end()
 
 " Config

@@ -52,6 +52,7 @@ source ~/.vim/custom/navigation.vim
 source ~/.vim/custom/term.vim
 
 " colorscheme
-let g:defim_best = 1
-let g:defim_no_cursorline = 1
-colorscheme defim
+"let g:defim_best = 1
+"let g:defim_no_cursorline = 1
+"colorscheme defim
+colorscheme catppuccin-mocha
