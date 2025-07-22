@@ -14,6 +14,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 " Plugings
 call plug#begin('~/.vim/bundle')
+  Plug 'vim-airline/vim-airline'
   Plug 'tpope/vim-surround'             "cs ds ys
   Plug 'tpope/vim-sleuth'
   Plug 'tpope/vim-sensible'
@@ -29,10 +30,12 @@ call plug#begin('~/.vim/bundle')
   Plug 'jistr/vim-nerdtree-tabs'
   Plug 'jiangmiao/auto-pairs'
   Plug 'godlygeek/tabular'
-  Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+  Plug 'catppuccin/vim', { 'as': 'catppuccin' }
   Plug 'airblade/vim-gitgutter'
   Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
+
+let g:airline_theme = 'catppuccin_mocha'
 
 " Config
 let g:AutoPairs = {
