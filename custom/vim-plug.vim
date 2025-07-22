@@ -35,9 +35,8 @@ call plug#begin('~/.vim/bundle')
   Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
-let g:airline_theme = 'catppuccin_mocha'
-
 " Config
+let g:airline_theme = 'catppuccin_mocha'
 let g:AutoPairs = {
   \'(':')',
   \'[':']',
