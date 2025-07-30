@@ -61,7 +61,7 @@ autocmd FileType c   setlocal commentstring=//\ %s
 autocmd FileType cpp setlocal commentstring=//\ %s
 
 " Mapping
-nmap <C-K> :pyf /usr/share/clang/clang-format-7/clang-format.py<CR>
+nmap <C-K> :pyf /usr/share/clang/clang-format.py<CR>
 
 nnoremap <silent> <F1> :Goyo<CR>
 inoremap <silent> <F1> <C-O>:Goyo<CR>
