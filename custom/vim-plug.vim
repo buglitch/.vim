@@ -14,7 +14,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 " Plugings
 call plug#begin('~/.vim/bundle')
-  Plug 'vim-airline/vim-airline'
+  "Plug 'vim-airline/vim-airline'
   Plug 'tpope/vim-surround'             "cs ds ys
   Plug 'tpope/vim-sleuth'
   Plug 'tpope/vim-sensible'
@@ -37,6 +37,7 @@ call plug#end()
 
 " Config
 let g:airline_theme = 'catppuccin_mocha'
+
 let g:AutoPairs = {
   \'(':')',
   \'[':']',
@@ -49,10 +50,12 @@ let g:AutoPairs = {
   \"'''":"'''",
   \"<":">"
 \}
+
 let g:AutoPairsShortcutToggle='<F7>'
 let g:NERDTreeDirArrows=1
 let g:NERDTreeMinimalUI=1
 let g:gitgutter_enabled=0
+let g:vim_tips_display_at_startup=0
 
 autocmd FileType c   setlocal commentstring=//\ %s
 autocmd FileType cpp setlocal commentstring=//\ %s
