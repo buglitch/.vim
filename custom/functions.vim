@@ -13,6 +13,7 @@ inoremap <silent> <M-@> <C-O>:pwd<CR>
 
 nnoremap <silent> <F3> :set invnumber<CR>
 inoremap <silent> <F3> <C-O>:set invnumber<CR>
+set number
 
 nnoremap <silent> <M-#> :set cursorline!<CR>
 inoremap <silent> <M-#> <C-O>:set cursorline!<CR>
@@ -21,6 +22,7 @@ nnoremap <silent> <F4> :execute "set colorcolumn="
          \ . (&colorcolumn == "" ? "80" : "")<CR>
 inoremap <silent> <F4> <C-O>:execute "set colorcolumn="
          \ . (&colorcolumn == "" ? "80" : "")<CR>
+set colorcolumn=80
 
 nnoremap <silent> <M-$> :set cursorcolumn!<CR>
 inoremap <silent> <M-$> <C-O>:set cursorcolumn!<CR>

@@ -19,6 +19,7 @@ call plug#begin('~/.vim/bundle')
   Plug 'tpope/vim-sleuth'
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-commentary'           "gc
+  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'sheerun/vim-polyglot'
   Plug 'ryanoasis/vim-devicons'
   Plug 'preservim/nerdtree'
