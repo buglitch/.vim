@@ -1,3 +1,4 @@
 plug.vim
 plug.vim.old
 bundle/
+*.un~

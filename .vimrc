@@ -14,7 +14,7 @@ set sidescrolloff=8
 set title
 set undofile
 aunmenu PopUp.How-to\ disable\ mouse
-aunmenu PopUp.-2-
+"aunmenu PopUp.-2-
 
 " indent
 set autoindent
@@ -54,7 +54,7 @@ source ~/.vim/custom/navigation.vim
 source ~/.vim/custom/term.vim
 
 " colorscheme
-"let g:defim_best = 1
-"let g:defim_no_cursorline = 1
-"colorscheme defim
-colorscheme catppuccin_mocha
+let g:defim_best = 1
+let g:defim_no_cursorline = 1
+colorscheme defim
+"colorscheme catppuccin_mocha
