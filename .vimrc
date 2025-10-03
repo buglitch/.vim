@@ -57,4 +57,5 @@ source ~/.vim/custom/term.vim
 let g:defim_best = 1
 let g:defim_no_cursorline = 1
 colorscheme defim
+"set termguicolors
 "colorscheme catppuccin_mocha
